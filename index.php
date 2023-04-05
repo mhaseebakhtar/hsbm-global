@@ -1,4 +1,7 @@
 <?php
+
+include 'constants/const.php';
+
 /**
  * CodeIgniter
  *
