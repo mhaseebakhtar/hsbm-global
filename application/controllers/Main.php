@@ -12,4 +12,18 @@ class Main extends CI_Controller {
 
 		$this->load->view('template', $data);
 	}
+
+	public function aboutUs() {
+		$data['title'] = 'About Us | HSBM Global';
+		$data['page'] = 'about-us';
+
+		$this->load->view('template', $data);
+	}
+
+	public function contactUs() {
+		$data['title'] = 'Contact Us | HSBM Global';
+		$data['page'] = 'contact-us';
+
+		$this->load->view('template', $data);
+	}
 }

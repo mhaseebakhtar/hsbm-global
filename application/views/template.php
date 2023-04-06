@@ -66,13 +66,13 @@
 				<span class="fa fa-bars"></span> Menu
 			</button>
 			<div class="collapse navbar-collapse" id="ftco-nav">
-				<ul class="navbar-nav m-auto">
-					<li class="nav-item active"><a href="<?= base_url() ?>" class="nav-link">Home</a></li>
-					<li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item <?= $page == 'index' ? 'active' : '' ?>"><a href="<?= base_url() ?>" class="nav-link">Home</a></li>
+					<li class="nav-item <?= $page == 'about-us' ? 'active' : '' ?>"><a href="<?= base_url('about-us') ?>" class="nav-link">About Us</a></li>
 					<li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
 					<li class="nav-item"><a href="cases.html" class="nav-link">Case Study</a></li>
 					<li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
-					<li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+					<li class="nav-item <?= $page == 'contact-us' ? 'active' : '' ?>"><a href="<?= base_url('contact-us') ?>" class="nav-link">Contact Us</a></li>
 				</ul>
 			</div>
 		</div>
@@ -87,7 +87,7 @@
 					<div class="row">
 						<div class="col-md-4 mb-md-0 mb-4">
 							<h2 class="footer-heading">About us</h2>
-							<p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+							<p>Expert Accounting and Tax Consulting Services for Businesses and Individuals</p>
 							<ul class="ftco-footer-social p-0">
 								<li class="ftco-animate"><a href="#" data-toggle="tooltip" data-placement="top" title="Twitter"><span class="fa fa-twitter"></span></a></li>
 								<li class="ftco-animate"><a href="#" data-toggle="tooltip" data-placement="top" title="Facebook"><span class="fa fa-facebook"></span></a></li>
@@ -110,8 +110,8 @@
 										<div class="col-md-4 mb-md-0 mb-4">
 											<h2 class="footer-heading">Discover</h2>
 											<ul class="list-unstyled">
-												<li><a href="#" class="py-1 d-block">About us</a></li>
-												<li><a href="#" class="py-1 d-block">Contract us</a></li>
+												<li><a href="<?= base_url('about-us') ?>" class="py-1 d-block">About Us</a></li>
+												<li><a href="<?= base_url('contact-us') ?>" class="py-1 d-block">Contact Us</a></li>
 												<li><a href="#" class="py-1 d-block">Terms &amp; Conditions</a></li>
 												<li><a href="#" class="py-1 d-block">Policies</a></li>
 											</ul>
