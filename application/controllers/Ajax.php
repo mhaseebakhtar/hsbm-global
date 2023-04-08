@@ -26,10 +26,6 @@ class Ajax extends CI_Controller {
                 'body' => $message,
             );
 
-            echo "<pre>";
-            print_r($params);
-            die;
-
             $mailSettings = $this->handler->getSettings('mail');
 
             $mail = $this->mail->sendOtherMail($mailSettings['receiver_email'], $params);

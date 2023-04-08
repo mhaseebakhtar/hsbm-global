@@ -55,3 +55,21 @@ $route['translate_uri_dashes'] = FALSE;
 
 $route['about-us'] = 'main/aboutUs';
 $route['contact-us'] = 'main/contactUs';
+
+// admin routes
+$route['admin'] = 'dashboard';
+$route['admin/dashboard'] = 'dashboard/dashboard';
+$route['admin/account'] = 'dashboard/account';
+
+$route['admin/subscribers'] = 'dashboard/subscribers';
+$route['admin/subscribers/(:num)'] = 'dashboard/subscribers';
+
+// settings
+$route['admin/global-settings'] = 'dashboard/globalSettings';
+$route['admin/mail-settings'] = 'dashboard/mail';
+
+// generic functions
+$route['admin/save-settings'] = 'dashboard/save';
+$route['admin/delete'] = 'dashboard/delete';
+$route['admin/login'] = 'dashboard/login';
+$route['admin/logout'] = 'dashboard/logout';

@@ -167,6 +167,25 @@ class Handler extends CI_Model {
         return $settings;
     }
 
+    public function setSettings($data = array(), $type) {
+        if (!empty($data)) {
+            foreach ($data as $name => $value) {
+                $arr = array(
+                    'type' => $type,
+                    'name' => $name,
+                    'value' => $value,
+                );
+
+                $sql = $this->db->insert_string('settings', $arr) . " ON DUPLICATE KEY UPDATE name = '$name', value = '$value'";
+                $insert = $this->db->query($sql);
+            }
+
+            return $insert ? true : false;
+        }
+
+        return false;
+    }
+
     public function getSetting($type, $name) {
         $this->db->where('type', $type);
         $this->db->where('name', $name);
@@ -177,5 +196,64 @@ class Handler extends CI_Model {
         $num_rows = $query->num_rows();
 
         return $num_rows ? $result['value'] : false;
+    }
+
+    public function getTotalCount($table) {
+        $query = $this->db->get($table);
+        $num_rows = $query->num_rows();
+
+        return ($num_rows) ? $num_rows : false;
+    }
+
+    public function get($limit, $start, $table, $order = false) {
+        if ($order) {
+            $this->db->order_by($order);
+        }
+
+        $this->db->limit($limit, $start);
+        $query = $this->db->get($table);
+
+        $result = $query->result();
+        $num_rows = $query->num_rows();
+
+        return ($num_rows) ? $result : false;
+    }
+
+    public function customPagination($base_url, $total, $limit) {
+        $config['base_url'] = $base_url;
+        $config['total_rows'] = $total;
+        $config['per_page'] = $limit;
+        $config["uri_segment"] = 3;
+
+        $config['num_links'] = 3;
+        $config['use_page_numbers'] = true;
+        $config['reuse_query_string'] = true;
+
+        $config['full_tag_open'] = '<div class="pagination">';
+        $config['full_tag_close'] = '</div>';
+
+        $config['first_link'] = 'First';
+        $config['first_tag_open'] = '<span class="firstlink">';
+        $config['first_tag_close'] = '</span>';
+
+        $config['last_link'] = 'Last';
+        $config['last_tag_open'] = '<span class="lastlink">';
+        $config['last_tag_close'] = '</span>';
+
+        $config['next_link'] = 'Next';
+        $config['next_tag_open'] = '<span class="nextlink">';
+        $config['next_tag_close'] = '</span>';
+
+        $config['prev_link'] = 'Prev';
+        $config['prev_tag_open'] = '<span class="prevlink">';
+        $config['prev_tag_close'] = '</span>';
+
+        $config['cur_tag_open'] = '<span class="curlink">';
+        $config['cur_tag_close'] = '</span>';
+
+        $config['num_tag_open'] = '<span class="numlink text-white">';
+        $config['num_tag_close'] = '</span>';
+
+        return $config;
     }
 }
