@@ -61,6 +61,13 @@ $route['admin'] = 'dashboard';
 $route['admin/dashboard'] = 'dashboard/dashboard';
 $route['admin/account'] = 'dashboard/account';
 
+$route['ajax/new-category'] = 'ajax/category/new';
+$route['ajax/get-category'] = 'ajax/category/get';
+$route['ajax/edit-category'] = 'ajax/category/edit';
+
+$route['admin/blog-categories'] = 'dashboard/blogCategories';
+$route['admin/blog-categories/(:num)'] = 'dashboard/blogCategories';
+
 $route['admin/subscribers'] = 'dashboard/subscribers';
 $route['admin/subscribers/(:num)'] = 'dashboard/subscribers';
 

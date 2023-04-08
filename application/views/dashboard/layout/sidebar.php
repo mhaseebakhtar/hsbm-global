@@ -39,6 +39,28 @@
                     </a>
                 </li>
 
+                <li class="<?= ($this->uri->segment(2) == 'blog-categories' || $this->uri->segment(2) == 'blogs') ? 'mm-active' : '' ?>">
+                    <a href="#" class="<?= ($this->uri->segment(2) == 'blog-categories' || $this->uri->segment(2) == 'blogs') ? 'mm-active' : '' ?>">
+                        <i class="metismenu-icon pe-7s-news-paper"></i>
+                        Blogs
+                        <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                    </a>
+
+                    <ul>
+                        <li>
+                            <a href="<?= base_url('admin/blog-categories'); ?>" class="<?= ($this->uri->segment(2) == 'blog-categories') ? 'mm-active' : '' ?>">
+                                <i class="metismenu-icon"></i>Blog Catgories
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="<?= base_url('admin/blogs'); ?>" class="<?= ($this->uri->segment(2) == 'blogs') ? 'mm-active' : '' ?>">
+                                <i class="metismenu-icon"></i>Blogs
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
                 <li>
                     <a href="<?= base_url('admin/subscribers'); ?>" class="<?= ($this->uri->segment(2) == 'subscribers') ? 'mm-active' : '' ?>">
                         <i class="metismenu-icon pe-7s-users"></i>
