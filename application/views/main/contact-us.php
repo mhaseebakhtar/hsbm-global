@@ -25,35 +25,35 @@
                                 <div id="form-message-success" class="mb-4">
                                     Your message was sent, thank you!
                                 </div>
-                                <form method="POST" id="contactForm" name="contactForm" class="contactForm">
+                                <form method="post" name="contactForm" class="contactForm contact-us" data-action="<?= base_url('ajax/contact') ?>">
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label class="label" for="name">Full Name</label>
-                                                <input type="text" class="form-control" name="name" id="name" placeholder="Name">
+                                                <input type="text" class="form-control" name="name" id="name" placeholder="Name" required>
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label class="label" for="email">Email Address</label>
-                                                <input type="email" class="form-control" name="email" id="email" placeholder="Email">
+                                                <input type="email" class="form-control" name="email" id="email" placeholder="Email" required>
                                             </div>
                                         </div>
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label class="label" for="subject">Subject</label>
-                                                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject">
+                                                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
                                             </div>
                                         </div>
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label class="label" for="#">Message</label>
-                                                <textarea name="message" class="form-control" id="message" cols="30" rows="4" placeholder="Message"></textarea>
+                                                <textarea name="message" class="form-control" id="message" cols="30" rows="4" placeholder="Message" required></textarea>
                                             </div>
                                         </div>
                                         <div class="col-md-12">
                                             <div class="form-group">
-                                                <input type="submit" value="Send Message" class="btn btn-primary">
+                                                <input type="submit" name="submit" value="Send Message" class="btn btn-primary">
                                                 <div class="submitting"></div>
                                             </div>
                                         </div>
@@ -87,15 +87,7 @@
                                         <span class="fa fa-paper-plane"></span>
                                     </div>
                                     <div class="text pl-3">
-                                        <p><span>Email:</span> <a href="mailto:info@yoursite.com">info@yoursite.com</a></p>
-                                    </div>
-                                </div>
-                                <div class="dbox w-100 d-flex align-items-center">
-                                    <div class="icon d-flex align-items-center justify-content-center">
-                                        <span class="fa fa-globe"></span>
-                                    </div>
-                                    <div class="text pl-3">
-                                        <p><span>Website</span> <a href="#">yoursite.com</a></p>
+                                        <p><span>Email:</span> <a href="mailto:contact@hsbmglobal.com">contact@hsbmglobal.com</a></p>
                                     </div>
                                 </div>
                             </div>

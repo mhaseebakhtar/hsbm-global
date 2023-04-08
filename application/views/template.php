@@ -23,6 +23,7 @@
 	<link rel="stylesheet" href="<?= base_url('assets/css/owl.theme.default.min.css') . version ?>">
 	<link rel="stylesheet" href="<?= base_url('assets/css/magnific-popup.css') . version ?>">
 	<link rel="stylesheet" href="<?= base_url('assets/css/flaticon.css') . version ?>">
+	<link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bootstrap-4@5.0.15/bootstrap-4.min.css" rel="stylesheet">
 
 	<!-- Stylesheet -->
 	<link rel="stylesheet" href="<?= base_url('assets/css/style.css') . version ?>">
@@ -79,6 +80,24 @@
 	</nav>
 
 	<?php include 'main/' . $page . '.php'; ?>
+
+	<section class="ftco-section ftco-no-pb ftco-no-pt bg-secondary">
+		<div class="container py-5">
+			<div class="row">
+				<div class="col-md-7 d-flex align-items-center">
+					<h2 class="mb-3 mb-sm-0" style="color:black; font-size: 22px;">Sign Up for Your Free 1st Accounting Consultation</h2>
+				</div>
+				<div class="col-md-5 d-flex align-items-center">
+					<form method="post" class="subscribe-form" data-action="<?= base_url('ajax/subscribe') ?>">
+						<div class="form-group d-flex">
+							<input type="text" name="email" id="semail" class="form-control" placeholder="Enter email address">
+							<input type="submit" name="submit" value="Subscribe" class="submit px-3">
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
 
 	<footer class="footer">
 		<div class="container-fluid px-lg-5">
@@ -141,21 +160,21 @@
 				</div>
 				<div class="col-md-3 py-md-5 py-4 aside-stretch-right pl-lg-5">
 					<h2 class="footer-heading">Free consultation</h2>
-					<form action="#" class="form-consultation">
+					<form method="post" class="form-consultation" data-action="<?= base_url('ajax/contact') ?>">
 						<div class="form-group">
-							<input type="text" class="form-control" placeholder="Your Name">
+							<input type="text" class="form-control" placeholder="Your Name" name="name" id="fname" required>
 						</div>
 						<div class="form-group">
-							<input type="text" class="form-control" placeholder="Your Email">
+							<input type="email" class="form-control" placeholder="Your Email" name="email" id="femail" required>
 						</div>
 						<div class="form-group">
-							<input type="text" class="form-control" placeholder="Subject">
+							<input type="text" class="form-control" placeholder="Subject" name="subject" id="fsubject" required>
 						</div>
 						<div class="form-group">
-							<textarea name="" id="" cols="30" rows="3" class="form-control" placeholder="Message"></textarea>
+							<textarea cols="30" rows="3" class="form-control" placeholder="Message" name="message" id="fmessage" required></textarea>
 						</div>
 						<div class="form-group">
-							<button type="submit" class="form-control submit px-3">Send A Message</button>
+							<input type="submit" name="submit" value="Send A Message" class="form-control submit px-3">
 						</div>
 					</form>
 				</div>
@@ -183,8 +202,20 @@
 	<script src="<?= base_url('assets/js/jquery.magnific-popup.min.js') . version ?>"></script>
 	<script src="<?= base_url('assets/js/scrollax.min.js') . version ?>"></script>
 
+	<script src="<?= base_url('assets/js/jquery.form.min.js') . version ?>"></script>
+	<script src="<?= base_url('assets/js/jquery.validate.min.js') . version ?>"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.all.min.js"></script>
+
 	<!-- Scripts -->
 	<script src="<?= base_url('assets/js/main.js') . version ?>"></script>
+
+	<script>
+		$(function () {
+			validateAndSubmit(".contact-us");
+			validateAndSubmit(".form-consultation");
+			validateAndSubmit(".subscribe-form");
+		});
+	</script>
 </body>
 
 </html>

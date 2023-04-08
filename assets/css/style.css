@@ -9624,6 +9624,9 @@ textarea.form-control {
   -webkit-box-shadow: none;
   box-shadow: none; }
 
+  #ftco-loader.opacity {
+    background-color: rgb(255 255 255 / 50%); }
+
 #ftco-loader.show {
   -webkit-transition: opacity .4s ease-out, visibility 0s linear 0s;
   -o-transition: opacity .4s ease-out, visibility 0s linear 0s;
@@ -9680,3 +9683,6 @@ textarea.form-control {
   100% {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -136px; } }
+  label.error {
+      color: red;
+  }
