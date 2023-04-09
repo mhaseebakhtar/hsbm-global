@@ -68,6 +68,13 @@ $route['ajax/edit-category'] = 'ajax/category/edit';
 $route['admin/blog-categories'] = 'dashboard/blogCategories';
 $route['admin/blog-categories/(:num)'] = 'dashboard/blogCategories';
 
+$route['ajax/new-blog'] = 'ajax/blog/new';
+$route['ajax/get-blog'] = 'ajax/blog/get';
+$route['ajax/edit-blog'] = 'ajax/blog/edit';
+
+$route['admin/blogs'] = 'dashboard/blogs';
+$route['admin/blogs/(:num)'] = 'dashboard/blogs';
+
 $route['admin/subscribers'] = 'dashboard/subscribers';
 $route['admin/subscribers/(:num)'] = 'dashboard/subscribers';
 

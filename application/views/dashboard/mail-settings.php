@@ -9,8 +9,7 @@
 </head>
 
 <body>
-    <div class="app-container <?php foreach ($globalSettings as $type => $value) : echo ($value) ? " " . $type : '';
-                                                endforeach; ?>">
+    <div class="app-container <?php foreach ($globalSettings as $type => $value) : echo ($value) ? " " . $type : ''; endforeach; ?>">
 
         <!-- Header -->
         <?php include 'layout/header.php' ?>
