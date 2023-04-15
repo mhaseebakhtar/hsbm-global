@@ -2,7 +2,7 @@
 <html lang="en">
 
     <head>
-        <title>Subscribers | Falcon Couriers</title>
+        <title>Subscribers | HSBM Global</title>
 
         <!-- Files -->
         <?php include 'layout/links.php' ?>

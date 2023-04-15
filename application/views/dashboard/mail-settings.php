@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Mail Settings | Falcon Couriers</title>
+    <title>Mail Settings | HSBM Global</title>
 
     <!-- Files -->
     <?php include 'layout/links.php' ?>

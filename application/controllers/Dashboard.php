@@ -136,6 +136,29 @@ class Dashboard extends CI_Controller {
         }  
     }
 
+    public function blog() {
+        if ($this->loggedIn) {
+            $data = array('error_msg' => '', 'success_msg' => '');
+            $data['globalSettings'] = $this->handler->getSettings('global');
+            $data['colorSettings'] = $this->handler->getSettings('color');
+
+            $data['user'] = $this->user;
+
+            $blog = false;
+            $blogID = ($this->uri->segment(3)) ?: 0;
+            if ($blogID) {
+                $blog = $this->handler->getRows(array('id' => $blogID), 'blogs');
+            }
+
+            $data['blog'] = $blog;
+            $data['categories'] = $this->handler->getRows(array(), 'blog_categories');
+
+            $this->load->view('dashboard/blog', $data);
+        } else {
+            redirect('admin/login');
+        }
+    }
+
     public function subscribers() {
         if ($this->loggedIn) {
             $data = array('error_msg' => '', 'success_msg' => '');

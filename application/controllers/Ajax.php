@@ -118,56 +118,48 @@ class Ajax extends CI_Controller {
         $response = array('status' => false);
 
         if ($type == 'new') {
-            echo "<pre>";
-            print_r($this->input->post());
-            die;
-
             $name = $this->input->post('name');
             $slug = strtolower(trim(preg_replace('/[^A-Za-z0-9-]+/', '-', $name)));
 
             $params = array(
                 'name' => $name,
                 'slug' => $slug,
+                'title' => $this->input->post('title'),
+                'description' => $this->input->post('description'),
+                'category' => $this->input->post('category'),
+                'blog' => $this->input->post('blog'),
                 'status' => $this->input->post('status')
             );
 
-            $action = $this->handler->insert($params, 'blog_categories');
+            $action = $this->handler->insert($params, 'blogs');
             if ($action) {
                 $response = array(
                     'status' => true,
-                    'message' => 'New Category added successfully!'
+                    'message' => 'New Blog added successfully!'
                 );
             }
-        } else if ($type == 'get') {
-            $category_id = $this->input->post('category_id');
-
-            $category = $this->handler->getRecord($category_id, 'blog_categories');
-
-            $response = array(
-                'status' => true,
-                'category' => $category
-            );
         } else if ($type == 'edit') {
             $id = $this->input->post('id');
-            $status = $this->input->post('status');
 
-            $name = $this->input->post('category');
+            $name = $this->input->post('name');
             $slug = strtolower(trim(preg_replace('/[^A-Za-z0-9-]+/', '-', $name)));
 
             $params = array(
                 'id' => $id,
                 'name' => $name,
                 'slug' => $slug,
-                'status' => $status
+                'title' => $this->input->post('title'),
+                'description' => $this->input->post('description'),
+                'category' => $this->input->post('category'),
+                'blog' => $this->input->post('blog'),
+                'status' => $this->input->post('status')
             );
 
-            $action = $this->handler->update($params, 'blog_categories');
+            $action = $this->handler->update($params, 'blogs');
             if ($action) {
-                $this->handler->updateByCol(array('status' => $status), array('category' => $id), 'blogs');
-
                 $response = array(
                     'status' => true,
-                    'message' => 'Category updated successfully!'
+                    'message' => 'Blog updated successfully!'
                 );
             }
         }

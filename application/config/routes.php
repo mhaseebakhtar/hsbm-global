@@ -72,6 +72,8 @@ $route['ajax/new-blog'] = 'ajax/blog/new';
 $route['ajax/get-blog'] = 'ajax/blog/get';
 $route['ajax/edit-blog'] = 'ajax/blog/edit';
 
+$route['admin/new-blog'] = 'dashboard/blog';
+$route['admin/update-blog/(:num)'] = 'dashboard/blog';
 $route['admin/blogs'] = 'dashboard/blogs';
 $route['admin/blogs/(:num)'] = 'dashboard/blogs';
 

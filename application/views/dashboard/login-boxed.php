@@ -50,7 +50,7 @@
                         </div>
 
                         <div class="text-center text-white opacity-8 mt-3">
-                            Copyright &copy; <?= date('Y') ?> All rights reserved | <a class="text-white" href="<?= base_url() ?>">Falcon Couriers</a>
+                            Copyright &copy; <?= date('Y') ?> All rights reserved | <a class="text-white" href="<?= base_url() ?>">HSBM Global</a>
                         </div>
                     </div>
                 </div>

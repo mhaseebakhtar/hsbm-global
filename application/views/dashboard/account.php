@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Account | Falcon Couriers</title>
+    <title>Account | HSBM Global</title>
 
     <!-- Files -->
     <?php include 'layout/links.php' ?>
