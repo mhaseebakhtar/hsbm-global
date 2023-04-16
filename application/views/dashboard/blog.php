@@ -39,7 +39,7 @@
                     </div>
 
                     <div class="main-card mb-3 card">
-                        <form method="post" class="blogs-form" autocomplete="off">
+                        <form method="post" class="blogs-form" autocomplete="off" enctype="multipart/form-data">
                             <div class="modal-body">
                                 <div class="position-relative row form-group">
                                     <label for="name" class="col-sm-2 col-form-label">Name</label>
@@ -56,9 +56,9 @@
                                 </div>
 
                                 <div class="position-relative row form-group">
-                                    <label for="description" class="col-sm-2 col-form-label">Description</label>
+                                    <label for="image" class="col-sm-2 col-form-label">Featured Image</label>
                                     <div class="col-sm-10">
-                                        <textarea name="description" id="description" cols="30" rows="3" class="form-control" placeholder="Description" required><?= $blog ? $blog->description : "" ?></textarea>
+                                        <input name="image" id="image" placeholder="Featured Image" type="file" class="form-control-file" accept="image/*" <?= !$blog ? 'required' : '' ?>>
                                     </div>
                                 </div>
 
@@ -74,6 +74,13 @@
                                                 <?php } ?>
                                             <?php } ?>
                                         </select>
+                                    </div>
+                                </div>
+
+                                <div class="position-relative row form-group">
+                                    <label for="description" class="col-sm-2 col-form-label">Description</label>
+                                    <div class="col-sm-10">
+                                        <textarea name="description" id="description" cols="30" rows="3" class="form-control" placeholder="Description" required><?= $blog ? $blog->description : "" ?></textarea>
                                     </div>
                                 </div>
 
@@ -122,12 +129,6 @@
                 e.preventDefault();
 
                 var id = '';
-                var name = $('#name').val();
-                var title = $('#title').val();
-                var description = $('#description').val();
-                var category = $('#category').val();
-                var blog = $('#blog').val();
-                var status = $('#status').val();
 
                 var url = "<?= base_url('ajax/new-blog') ?>";
                 if ($('.btn-save').data('type') == 'update') {
@@ -135,21 +136,11 @@
                     url = "<?= base_url('ajax/edit-blog') ?>";
                 }
 
-                $.ajax({
+                $(this).ajaxSubmit({
                     url: url,
                     type: "post",
-                    data: {
-                        id: id,
-                        name: name,
-                        title: title,
-                        description: description,
-                        category: category,
-                        blog: blog,
-                        status: status,
-                    },
+                    data: {id: id},
                     success: function (response) {
-                        $('.new-blog').modal('hide');
-
                         if (response.status) {
                             toastr.success(response.message, '', {
                                 timeOut: 2,
@@ -163,7 +154,7 @@
                             });
                         }
                     }
-                });
+			    });
             });
         });
     </script>

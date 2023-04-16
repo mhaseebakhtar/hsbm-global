@@ -198,16 +198,28 @@ class Handler extends CI_Model {
         return $num_rows ? $result['value'] : false;
     }
 
-    public function getTotalCount($table) {
+    public function getTotalCount($table, $condtions = array()) {
+        if (!empty($condtions)) {
+            foreach ($condtions as $key => $val) {
+                $this->db->where($key, $val);
+            }
+        }
+
         $query = $this->db->get($table);
         $num_rows = $query->num_rows();
 
         return ($num_rows) ? $num_rows : false;
     }
 
-    public function get($limit, $start, $table, $order = false) {
+    public function get($limit, $start, $table, $condtions = array(), $order = false) {
         if ($order) {
             $this->db->order_by($order);
+        }
+        
+        if (!empty($condtions)) {
+            foreach ($condtions as $key => $val) {
+                $this->db->where($key, $val);
+            }
         }
 
         $this->db->limit($limit, $start);
@@ -219,40 +231,40 @@ class Handler extends CI_Model {
         return ($num_rows) ? $result : false;
     }
 
-    public function customPagination($base_url, $total, $limit) {
+    public function customPagination($base_url, $total, $limit, $slug = NULL, $front = false) {
         $config['base_url'] = $base_url;
         $config['total_rows'] = $total;
         $config['per_page'] = $limit;
-        $config["uri_segment"] = 3;
+        $config["uri_segment"] = $front ? ($slug != NULL ? 3 : 2) : 3;
 
-        $config['num_links'] = 3;
+        $config['num_links'] = 5;
         $config['use_page_numbers'] = true;
         $config['reuse_query_string'] = true;
 
-        $config['full_tag_open'] = '<div class="pagination">';
-        $config['full_tag_close'] = '</div>';
+        $config['full_tag_open'] = $front ? '<ul>' : '<div class="pagination">';
+        $config['full_tag_close'] = $front ? '</ul>' : '</div>';
 
-        $config['first_link'] = 'First';
-        $config['first_tag_open'] = '<span class="firstlink">';
-        $config['first_tag_close'] = '</span>';
+        $config['first_link'] = $front ? '&lt;&lt;' : 'First';
+        $config['first_tag_open'] = $front ? '<li>' : '<span class="firstlink">';
+        $config['first_tag_close'] = $front ? '</li>' : '</span>';
 
-        $config['last_link'] = 'Last';
-        $config['last_tag_open'] = '<span class="lastlink">';
-        $config['last_tag_close'] = '</span>';
+        $config['last_link'] = $front ? '&gt;&gt;' : 'Last';
+        $config['last_tag_open'] = $front ? '<li>' : '<span class="lastlink">';
+        $config['last_tag_close'] = $front ? '</li>' : '</span>';
 
-        $config['next_link'] = 'Next';
-        $config['next_tag_open'] = '<span class="nextlink">';
-        $config['next_tag_close'] = '</span>';
+        $config['next_link'] = $front ? '&gt;' : 'Next';
+        $config['next_tag_open'] = $front ? '<li>' : '<span class="nextlink">';
+        $config['next_tag_close'] = $front ? '</li>' : '</span>';
 
-        $config['prev_link'] = 'Prev';
-        $config['prev_tag_open'] = '<span class="prevlink">';
-        $config['prev_tag_close'] = '</span>';
+        $config['prev_link'] = $front ? '&lt;' : 'Prev';
+        $config['prev_tag_open'] = $front ? '<li>' : '<span class="prevlink">';
+        $config['prev_tag_close'] = $front ? '</li>' : '</span>';
 
-        $config['cur_tag_open'] = '<span class="curlink">';
-        $config['cur_tag_close'] = '</span>';
+        $config['cur_tag_open'] = $front ? '<li class="active"><span>' : '<span class="curlink">';
+        $config['cur_tag_close'] = $front ? '</span></li>' : '</span>';
 
-        $config['num_tag_open'] = '<span class="numlink text-white">';
-        $config['num_tag_close'] = '</span>';
+        $config['num_tag_open'] = $front ? '<li>' : '<span class="numlink text-white">';
+        $config['num_tag_close'] = $front ? '</li>' : '</span>';
 
         return $config;
     }

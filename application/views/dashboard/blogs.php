@@ -79,7 +79,7 @@
                                                     </td>
                                                     <td class="text-right">
                                                         <div class="table-data-feature">
-                                                            <a href="<?= base_url('admin/update-blog/' . $blog->id); ?>" class="item" data-toggle="tooltip" data-placement="top" title="Edit" target="_blank">
+                                                            <a href="<?= base_url('admin/update-blog/' . $blog->id); ?>" class="item" data-toggle="tooltip" data-placement="top" title="Edit">
                                                                 <i class="pe-7s-tools icon-gradient bg-success h5"></i>
                                                             </a>
 

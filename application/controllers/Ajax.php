@@ -131,6 +131,15 @@ class Ajax extends CI_Controller {
                 'status' => $this->input->post('status')
             );
 
+            $config['upload_path'] = './uploads/blog';
+            $config['allowed_types'] = 'gif|jpg|png|jpeg';
+            $config['encrypt_name'] = true;
+            $this->load->library('upload', $config);
+            if ($this->upload->do_upload('image')) {
+                $image = $this->upload->data();
+                $params['image'] = 'uploads/blog/' . $image['file_name'];
+            }
+
             $action = $this->handler->insert($params, 'blogs');
             if ($action) {
                 $response = array(
@@ -154,6 +163,15 @@ class Ajax extends CI_Controller {
                 'blog' => $this->input->post('blog'),
                 'status' => $this->input->post('status')
             );
+
+            $config['upload_path'] = './uploads/blog';
+            $config['allowed_types'] = 'gif|jpg|png|jpeg';
+            $config['encrypt_name'] = true;
+            $this->load->library('upload', $config);
+            if ($this->upload->do_upload('image')) {
+                $image = $this->upload->data();
+                $params['image'] = 'uploads/blog/' . $image['file_name'];
+            }
 
             $action = $this->handler->update($params, 'blogs');
             if ($action) {

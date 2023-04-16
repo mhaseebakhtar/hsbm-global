@@ -68,10 +68,8 @@
 			<div class="collapse navbar-collapse" id="ftco-nav">
 				<ul class="navbar-nav ml-auto">
 					<li class="nav-item <?= $page == 'index' ? 'active' : '' ?>"><a href="<?= base_url() ?>" class="nav-link">Home</a></li>
+					<li class="nav-item <?= $page == 'blogs' ? 'active' : '' ?>"><a href="<?= base_url('blogs') ?>" class="nav-link">Blogs</a></li>
 					<li class="nav-item <?= $page == 'about-us' ? 'active' : '' ?>"><a href="<?= base_url('about-us') ?>" class="nav-link">About Us</a></li>
-					<li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
-					<li class="nav-item"><a href="cases.html" class="nav-link">Case Study</a></li>
-					<li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
 					<li class="nav-item <?= $page == 'contact-us' ? 'active' : '' ?>"><a href="<?= base_url('contact-us') ?>" class="nav-link">Contact Us</a></li>
 				</ul>
 			</div>
@@ -116,7 +114,7 @@
 							<div class="row justify-content-center">
 								<div class="col-md-12 col-lg-10">
 									<div class="row">
-										<div class="col-md-4 mb-md-0 mb-4">
+										<div class="col-md-6 mb-md-0 mb-4">
 											<h2 class="footer-heading">Services</h2>
 											<ul class="list-unstyled">
 												<li><a href="#" class="py-1 d-block">Market Analysis</a></li>
@@ -125,22 +123,12 @@
 												<li><a href="#" class="py-1 d-block">Structured Assestment</a></li>
 											</ul>
 										</div>
-										<div class="col-md-4 mb-md-0 mb-4">
+										<div class="col-md-6 mb-md-0 mb-4">
 											<h2 class="footer-heading">Discover</h2>
 											<ul class="list-unstyled">
+												<li><a href="<?= base_url('blogs') ?>" class="py-1 d-block">Blogs</a></li>
 												<li><a href="<?= base_url('about-us') ?>" class="py-1 d-block">About Us</a></li>
 												<li><a href="<?= base_url('contact-us') ?>" class="py-1 d-block">Contact Us</a></li>
-												<li><a href="#" class="py-1 d-block">Terms &amp; Conditions</a></li>
-												<li><a href="#" class="py-1 d-block">Policies</a></li>
-											</ul>
-										</div>
-										<div class="col-md-4 mb-md-0 mb-4">
-											<h2 class="footer-heading">Resources</h2>
-											<ul class="list-unstyled">
-												<li><a href="#" class="py-1 d-block">Security</a></li>
-												<li><a href="#" class="py-1 d-block">Global</a></li>
-												<li><a href="#" class="py-1 d-block">Charts</a></li>
-												<li><a href="#" class="py-1 d-block">Privacy</a></li>
 											</ul>
 										</div>
 									</div>
@@ -213,6 +201,12 @@
 			validateAndSubmit(".contact-us");
 			validateAndSubmit(".form-consultation");
 			validateAndSubmit(".subscribe-form");
+
+			$.each($('.blog-section img'), function (ind, el) {
+				if (!$(el).hasClass('img-fluid')) {
+					$(el).addClass('img-fluid');
+				}
+			}) 
 		});
 
 		if (window.history.replaceState) {

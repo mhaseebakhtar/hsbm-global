@@ -53,8 +53,14 @@ $route['default_controller'] = 'main';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
-$route['about-us'] = 'main/aboutUs';
-$route['contact-us'] = 'main/contactUs';
+$route['about-us'] = 'main/template/about-us';
+$route['contact-us'] = 'main/template/contact-us';
+
+$route['blogs'] = 'main/blogs';
+$route['blogs/(:num)'] = 'main/blogs';
+$route['blogs/(:any)'] = 'main/blogs/$1';
+$route['blogs/(:any)/(:num)'] = 'main/blogs/$1';
+$route['blog/(:any)/(:any)'] = 'main/blog/$1/$2';
 
 // admin routes
 $route['admin'] = 'dashboard';
