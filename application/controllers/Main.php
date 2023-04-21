@@ -10,6 +10,8 @@ class Main extends CI_Controller {
 		$data['title'] = 'HSBM Global';
 		$data['page'] = 'index';
 
+		$data['recent'] = $this->handler->getRows(array('conditions' => array('status' => 1), 'order' => 'created_at', 'direction' => 'desc', 'limit' => 3), 'blogs');
+
 		$this->load->view('template', $data);
 	}
 

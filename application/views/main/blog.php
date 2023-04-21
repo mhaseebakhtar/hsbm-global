@@ -43,9 +43,9 @@
                             <?php $category = $this->handler->getRecord($item->category, 'blog_categories') ?>
 
                             <div class="block-21 mb-4 d-flex">
-                                <a class="blog-img mr-4" style="background-image: url(<?= base_url($blog->image) ?>);"></a>
+                                <a class="blog-img mr-4" style="background-image: url(<?= base_url($item->image) ?>);"></a>
                                 <div class="text">
-                                    <h3 class="heading"><a href="<?= base_url("blog/{$category->slug}/{$blog->slug}/") ?>"><?= $blog->name ?></a></h3>
+                                    <h3 class="heading"><a href="<?= base_url("blog/{$category->slug}/{$item->slug}/") ?>"><?= $item->name ?></a></h3>
                                     <div class="meta">
                                         <div><span class="icon-calendar"></span>
                                             <?= date('F d, Y', strtotime($item->created_at)) ?>

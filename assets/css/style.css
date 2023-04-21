@@ -9686,3 +9686,5 @@ textarea.form-control {
   label.error {
       color: red;
   }
+  .owl-carousel .owl-stage { display: flex; }
+  .owl-stage-outer .item, .owl-stage-outer .testimony-wrap { height: 100%; }

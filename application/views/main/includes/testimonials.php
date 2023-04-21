@@ -3,8 +3,8 @@
     <div class="container">
         <div class="row justify-content-center pb-5 mb-3">
             <div class="col-md-7 heading-section heading-section-white text-center ftco-animate">
-                <span class="subheading">Testimonials</span>
-                <h2>Don't just take our word for it - here's what some of our satisfied clients have to say about working with us</h2>
+                <span class="subheading">Don't just take our word for it - here's what some of our satisfied clients have to say about working with us</span>
+                <h2>Testimonials</h2>
             </div>
         </div>
         <div class="row ftco-animate">
