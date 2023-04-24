@@ -59,6 +59,7 @@ $route['services/united-arab-emirates'] = 'main/template/united-arab-emirates';
 $route['services/economic-substance-regulations'] = 'main/template/economic-regulations';
 $route['contact-us'] = 'main/template/contact-us';
 $route['our-team'] = 'main/template/our-team';
+$route['privacy'] = 'main/template/privacy';
 
 $route['blogs'] = 'main/blogs';
 $route['blogs/(:num)'] = 'main/blogs';

@@ -125,7 +125,7 @@
 							<div class="row justify-content-center">
 								<div class="col-md-12 col-lg-10">
 									<div class="row">
-										<div class="col-md-6 mb-md-0 mb-4">
+										<div class="col-md-4 mb-md-0 mb-4">
 											<h2 class="footer-heading">Services</h2>
 											<ul class="list-unstyled">
 												<li><a href="<?= base_url('services') ?>#accounting" class="py-1 d-block">Accounting &amp; Book-Keeping</a></li>
@@ -135,13 +135,19 @@
 												<li><a href="<?= base_url('services') ?>#consulting" class="py-1 d-block">International Tax Consulting</a></li>
 											</ul>
 										</div>
-										<div class="col-md-6 mb-md-0 mb-4">
+										<div class="col-md-4 mb-md-0 mb-4">
 											<h2 class="footer-heading">Discover</h2>
 											<ul class="list-unstyled">
 												<li><a href="<?= base_url('services') ?>" class="py-1 d-block">Our Services</a></li>
 												<li><a href="<?= base_url('blogs') ?>" class="py-1 d-block">Blogs</a></li>
 												<li><a href="<?= base_url('about-us') ?>" class="py-1 d-block">About Us</a></li>
 												<li><a href="<?= base_url('contact-us') ?>" class="py-1 d-block">Contact Us</a></li>
+											</ul>
+										</div>
+										<div class="col-md-4 mb-md-0 mb-4">
+											<h2 class="footer-heading">RESOURCES</h2>
+											<ul class="list-unstyled">
+												<li><a href="<?= base_url('privacy') ?>" class="py-1 d-block">Privacy</a></li>
 											</ul>
 										</div>
 									</div>
