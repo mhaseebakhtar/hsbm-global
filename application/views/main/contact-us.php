@@ -21,10 +21,6 @@
                         <div class="col-lg-8 col-md-7 order-md-last d-flex align-items-stretch">
                             <div class="contact-wrap w-100 p-md-5 p-4">
                                 <h3 class="mb-4">Get in touch</h3>
-                                <div id="form-message-warning" class="mb-4"></div>
-                                <div id="form-message-success" class="mb-4">
-                                    Your message was sent, thank you!
-                                </div>
                                 <form method="post" name="contactForm" class="contactForm contact-us" data-action="<?= base_url('ajax/contact') ?>">
                                     <div class="row">
                                         <div class="col-md-6">
@@ -87,7 +83,7 @@
                                         <span class="fa fa-paper-plane"></span>
                                     </div>
                                     <div class="text pl-3">
-                                        <p><span>Email:</span> <a href="mailto:contact@hsbmglobal.com">contact@hsbmglobal.com</a></p>
+                                        <p><span>Email:</span> <a href="mailto:tax@hsbmglobal.com">tax@hsbmglobal.com</a></p>
                                     </div>
                                 </div>
                             </div>

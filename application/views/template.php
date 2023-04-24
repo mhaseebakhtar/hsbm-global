@@ -78,6 +78,7 @@
 						</div>
 					</li>
 	
+					<li class="nav-item <?= $page == 'our-team' ? 'active' : '' ?>"><a href="<?= base_url('our-team') ?>" class="nav-link">Our Team</a></li>
 					<li class="nav-item <?= $page == 'blogs' ? 'active' : '' ?>"><a href="<?= base_url('blogs') ?>" class="nav-link">Blogs</a></li>
 					<li class="nav-item <?= $page == 'about-us' ? 'active' : '' ?>"><a href="<?= base_url('about-us') ?>" class="nav-link">About Us</a></li>
 					<li class="nav-item <?= $page == 'contact-us' ? 'active' : '' ?>"><a href="<?= base_url('contact-us') ?>" class="nav-link">Contact Us</a></li>
