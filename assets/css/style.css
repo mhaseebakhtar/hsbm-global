@@ -9688,3 +9688,10 @@ textarea.form-control {
   }
   .owl-carousel .owl-stage { display: flex; }
   .owl-stage-outer .item, .owl-stage-outer .testimony-wrap { height: 100%; }
+  .heading-section h3 {    
+    font-size: 20px;
+    font-weight: 800; }
+    .heading-section h4 {    
+      font-size: 16px;
+      font-weight: bold;
+    text-decoration: underline; }

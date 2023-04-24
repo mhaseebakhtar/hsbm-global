@@ -54,6 +54,9 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
 $route['about-us'] = 'main/template/about-us';
+$route['services'] = 'main/template/services';
+$route['services/united-arab-emirates'] = 'main/template/united-arab-emirates';
+$route['services/economic-substance-regulations'] = 'main/template/economic-regulations';
 $route['contact-us'] = 'main/template/contact-us';
 
 $route['blogs'] = 'main/blogs';

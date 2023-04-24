@@ -61,13 +61,23 @@
 	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 		<div class="container">
 			<a class="navbar-brand" href="<?= base_url() ?>">HSBM Global</a>
-
+	
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="fa fa-bars"></span> Menu
 			</button>
 			<div class="collapse navbar-collapse" id="ftco-nav">
 				<ul class="navbar-nav ml-auto">
 					<li class="nav-item <?= $page == 'index' ? 'active' : '' ?>"><a href="<?= base_url() ?>" class="nav-link">Home</a></li>
+	
+					<li class="nav-item <?= $page == 'services' ? 'active' : '' ?> dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Our Services</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="<?= base_url('services') ?>">Services</a>
+							<a class="dropdown-item" href="<?= base_url('services/united-arab-emirates') ?>">United Arab Emirates</a>
+							<a class="dropdown-item" href="<?= base_url('services/economic-substance-regulations') ?>">Economic Substance Regulations</a>
+						</div>
+					</li>
+	
 					<li class="nav-item <?= $page == 'blogs' ? 'active' : '' ?>"><a href="<?= base_url('blogs') ?>" class="nav-link">Blogs</a></li>
 					<li class="nav-item <?= $page == 'about-us' ? 'active' : '' ?>"><a href="<?= base_url('about-us') ?>" class="nav-link">About Us</a></li>
 					<li class="nav-item <?= $page == 'contact-us' ? 'active' : '' ?>"><a href="<?= base_url('contact-us') ?>" class="nav-link">Contact Us</a></li>
@@ -117,15 +127,17 @@
 										<div class="col-md-6 mb-md-0 mb-4">
 											<h2 class="footer-heading">Services</h2>
 											<ul class="list-unstyled">
-												<li><a href="#" class="py-1 d-block">Market Analysis</a></li>
-												<li><a href="#" class="py-1 d-block">Accounting Advisor</a></li>
-												<li><a href="#" class="py-1 d-block">General Consultancy</a></li>
-												<li><a href="#" class="py-1 d-block">Structured Assestment</a></li>
+												<li><a href="<?= base_url('services') ?>#accounting" class="py-1 d-block">Accounting &amp; Book-Keeping</a></li>
+												<li><a href="<?= base_url('services') ?>#compliance" class="py-1 d-block">Tax Compliance</a></li>
+												<li><a href="<?= base_url('services') ?>#controversy" class="py-1 d-block">Tax Controversy</a></li>
+												<li><a href="<?= base_url('services') ?>#planning" class="py-1 d-block">Tax Planning</a></li>
+												<li><a href="<?= base_url('services') ?>#consulting" class="py-1 d-block">International Tax Consulting</a></li>
 											</ul>
 										</div>
 										<div class="col-md-6 mb-md-0 mb-4">
 											<h2 class="footer-heading">Discover</h2>
 											<ul class="list-unstyled">
+												<li><a href="<?= base_url('services') ?>" class="py-1 d-block">Our Services</a></li>
 												<li><a href="<?= base_url('blogs') ?>" class="py-1 d-block">Blogs</a></li>
 												<li><a href="<?= base_url('about-us') ?>" class="py-1 d-block">About Us</a></li>
 												<li><a href="<?= base_url('contact-us') ?>" class="py-1 d-block">Contact Us</a></li>

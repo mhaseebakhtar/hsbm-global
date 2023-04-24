@@ -51,7 +51,7 @@
                         <span class="flaticon-accounting-1"></span>
                     </div>
                     <div class="media-body">
-                        <h3 class="heading">Accounting &amp; Book-keeping</h3>
+                        <h3 class="heading">Accounting &amp; Book-Keeping</h3>
                         <p>Keep your finances in order and ensure compliance with local finance and tax laws.</p>
                     </div>
                 </div>
