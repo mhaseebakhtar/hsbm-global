@@ -5,9 +5,13 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8" />
+	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+
+	<meta name="description" content="Expert Accounting and Tax Consulting Services for Businesses and Individuals">
+	<meta name="keywords" content="accounting, tax, blog, book-keeping, bookkeeping, payroll processing, tax preparation, financial reporting, budgeting, tax compliance, tax Controversy, tax, planning, international tax csonsulting, economic substance regulations, uae, uae vat, uae ct">
+	<meta name="author" content="HSBM Global">
 
 	<title>
 		<?= (!empty($title)) ? $title : 'HSBM Global' ?>
@@ -15,14 +19,14 @@
 
 	<!-- Fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700,800&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="preload" as="font" type="font/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
 	<!-- Plugins -->
 	<link rel="stylesheet" href="<?= base_url('assets/css/animate.css') . version ?>">
 	<link rel="stylesheet" href="<?= base_url('assets/css/owl.carousel.min.css') . version ?>">
 	<link rel="stylesheet" href="<?= base_url('assets/css/owl.theme.default.min.css') . version ?>">
 	<link rel="stylesheet" href="<?= base_url('assets/css/magnific-popup.css') . version ?>">
-	<link rel="stylesheet" href="<?= base_url('assets/css/flaticon.css') . version ?>">
+	<link rel="preload" as="font" type="font/css" href="<?= base_url('assets/css/flaticon.css') . version ?>">
 	<link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bootstrap-4@5.0.15/bootstrap-4.min.css" rel="stylesheet">
 
 	<!-- Stylesheet -->
@@ -158,8 +162,7 @@
 					<div class="row mt-md-5">
 						<div class="col-md-12">
 							<p class="copyright">
-								Copyright &copy;
-								<script>document.write(new Date().getFullYear());</script> All rights reserved
+								Copyright &copy; <?= date('Y') ?> All rights reserved
 							</p>
 						</div>
 					</div>
@@ -197,6 +200,33 @@
 
 	<!-- Plugins -->
 	<script src="<?= base_url('assets/js/jquery.min.js') . version ?>"></script>
+
+	<script>
+		jQuery.event.special.touchstart = {
+			setup: function( _, ns, handle ) {
+				this.addEventListener("touchstart", handle, { passive: !ns.includes("noPreventDefault") });
+			}
+		};
+
+		jQuery.event.special.touchmove = {
+			setup: function( _, ns, handle ) {
+				this.addEventListener("touchmove", handle, { passive: !ns.includes("noPreventDefault") });
+			}
+		};
+
+		jQuery.event.special.wheel = {
+			setup: function( _, ns, handle ){
+				this.addEventListener("wheel", handle, { passive: true });
+			}
+		};
+
+		jQuery.event.special.mousewheel = {
+			setup: function( _, ns, handle ){
+				this.addEventListener("mousewheel", handle, { passive: true });
+			}
+		};
+	</script>
+
 	<script src="<?= base_url('assets/js/jquery-migrate-3.0.1.min.js') . version ?>"></script>
 	<script src="<?= base_url('assets/js/popper.min.js') . version ?>"></script>
 	<script src="<?= base_url('assets/js/bootstrap.min.js') . version ?>"></script>

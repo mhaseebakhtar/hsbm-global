@@ -2,7 +2,7 @@
 
 <div class="hero-wrap">
     <div class="home-slider owl-carousel">
-        <div class="slider-item" style="background-image:url(<?= base_url('assets/media/bg_1.jpg') ?>);">
+        <div class="slider-item" style="background-image:url(<?= base_url('assets/media/bg_1.webp') ?>);">
             <div class="overlay"></div>
             <div class="container">
                 <div class="row no-gutters slider-text align-items-center justify-content-center">
@@ -19,7 +19,7 @@
     </div>
 </div>
 
-<section class="ftco-section ftco-no-pt ftco-no-pb bg-light">
+<div class="ftco-section ftco-no-pt ftco-no-pb bg-light">
     <div class="container">
         <div class="row d-flex no-gutters">
             <div class="col-md-12 py-5">
@@ -27,7 +27,7 @@
             </div>
         </div>
     </div>
-</section>
+</div>
 
 <section class="ftco-section bg-light ftco-no-pt ftco-no-pb">
     <div class="container">

@@ -1,6 +1,6 @@
 <?php defined('BASEPATH') or exit('No direct script access allowed'); ?>
 
-<section class="hero-wrap hero-wrap-2" style="background-image: url('<?= base_url('assets/media/bg_2.jpg') ?>');" data-stellar-background-ratio="0.5">
+<section class="hero-wrap hero-wrap-2" style="background-image: url('<?= base_url('assets/media/bg_2.webp') ?>');" data-stellar-background-ratio="0.5">
     <div class="overlay"></div>
     <div class="container">
         <div class="row no-gutters slider-text align-items-end">
