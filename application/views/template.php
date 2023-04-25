@@ -19,15 +19,14 @@
 
 	<!-- Fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700,800&display=swap" rel="stylesheet">
-	<link rel="preload" as="font" type="font/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
 	<!-- Plugins -->
 	<link rel="stylesheet" href="<?= base_url('assets/css/animate.css') . version ?>">
 	<link rel="stylesheet" href="<?= base_url('assets/css/owl.carousel.min.css') . version ?>">
 	<link rel="stylesheet" href="<?= base_url('assets/css/owl.theme.default.min.css') . version ?>">
 	<link rel="stylesheet" href="<?= base_url('assets/css/magnific-popup.css') . version ?>">
-	<link rel="preload" as="font" type="font/css" href="<?= base_url('assets/css/flaticon.css') . version ?>">
-	<link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bootstrap-4@5.0.15/bootstrap-4.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="<?= base_url('assets/css/flaticon.css') . version ?>">
 
 	<!-- Stylesheet -->
 	<link rel="stylesheet" href="<?= base_url('assets/css/style.css') . version ?>">
@@ -42,8 +41,8 @@
 						<div class="row">
 							<div class="col-md-6 d-flex align-items-center">
 								<p class="mb-0 phone pl-md-2">
-									<a href="#" class="mr-2"><span class="fa fa-phone mr-1"></span> +00 1234 567</a>
-									<a href="#"><span class="fa fa-paper-plane mr-1"></span> youremail@email.com</a>
+									<a href="#" class="mr-2"><span class="fa fa-phone mr-1"></span> +971 50 745 9446</a>
+									<a href="#"><span class="fa fa-paper-plane mr-1"></span> tax@hsbmglobal.com</a>
 								</p>
 							</div>
 							<div class="col-md-6 d-flex justify-content-md-end">

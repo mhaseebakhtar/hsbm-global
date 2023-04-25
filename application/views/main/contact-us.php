@@ -67,7 +67,7 @@
                                         <span class="fa fa-map-marker"></span>
                                     </div>
                                     <div class="text pl-3">
-                                        <p><span>Address:</span> 198 West 21th Street, Suite 721 New York NY 10016</p>
+                                        <p><span>Address:</span> Building A1, IFZA Business Park, DDP Dubai Silicone Oasis Dubai, UAE</p>
                                     </div>
                                 </div>
                                 <div class="dbox w-100 d-flex align-items-center">
@@ -75,7 +75,7 @@
                                         <span class="fa fa-phone"></span>
                                     </div>
                                     <div class="text pl-3">
-                                        <p><span>Phone:</span> <a href="tel://1234567920">+ 1235 2355 98</a></p>
+                                        <p><span>Phone:</span> <a href="tel://971507459446">+971 50 745 9446</a></p>
                                     </div>
                                 </div>
                                 <div class="dbox w-100 d-flex align-items-center">
